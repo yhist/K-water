@@ -777,6 +777,87 @@ body {
   background-size: cover;
 }
 
+.service .contents-wrap {
+  height: 440px;
+  max-height: 440px;
+}
+
+.service-left {
+  float: left;
+  width: 23.2%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-top: 3px solid #fff;
+  margin-right: 1.78%;
+  padding: 40px;
+}
+
+
+
+.service-center {
+  float: left;
+  width: calc(100% - 46.4% - 3.56%);
+  height: 100%;
+
+}
+
+.service-right {
+  float: left;
+  width: 23.2%;
+  height: 100%;
+  margin-left: 1.78%;
+  border: 2px solid #fff;
+  border-top: 3px solid #fff;
+  padding: 40px;
+
+}
+
+.service-title2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 25px 0;
+}
+.service-list {}
+
+.service-list li {
+  padding: 20px 0;
+  border-bottom: 1px dashed #fff;
+}
+
+.service-list li:last-child {
+  border-bottom: 0;
+}
+
+.service-list li a {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.service-list li a::after {
+  content: '';
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 8px;
+  background: url('../images/white-arrow.png') no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.service-list li a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.service-list li a:hover::after {
+  opacity: 1;
+}
+
 
 /* 뉴스 */
 .news {
