@@ -408,6 +408,9 @@ body {
   height: 100vh;
   background: #f5fcff;
 }
+.about .inner {
+  z-index: 1;
+}
 
 .about::before {
   content: '';
@@ -418,7 +421,26 @@ body {
   width: 485px;
   height: 578px;
   background: url('../images/about.png') no-repeat center;
-  background-size: contain;
+  background-size: cover;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 161px;
+  background: url('../images/about-wave.png');
+  animation: about_bg_ani 10s infinite; 
+}
+
+@keyframes about_bg_ani{
+  0% {background-position: center center;}
+  25% {background-position: 70% center;}
+  50% {background-position: center center;}
+  75% {background-position: 70% center;}
+  100% {background-position: center center;}
 }
 
 .about-box {
@@ -703,6 +725,11 @@ body {
   margin-right: 8px;
 }
 
+.sns-icon-wrap a:hover {
+  transform: rotateY(360deg);
+  transition: transform 0.8s;
+}
+
 .sns-icon-yt {
   background: url('../images/about_yt.png') no-repeat center;
   background-size: cover;
@@ -795,11 +822,195 @@ body {
 
 
 .service-center {
+  position: relative;
   float: left;
-  width: calc(100% - 46.4% - 3.56%);
   height: 100%;
+  width: calc(100% - 46.4% - 3.56%);
+}
+
+.service-top {
+  height: 45.5%;
+  border: 2px solid #fff;
+  border-top: 3px solid #fff;
+  padding: 30px;
+}
+
+.service-link-list {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.service-link-list li {
+  display: table-cell;
+  width: 25%;
+  height: 100%;
+  border-right: 1px dashed rgba(255, 255, 255, 0.6);
+}
+
+.service-link-list li:last-child {
+  border-right: none;
+}
+
+.service-link-list li a {
+  display: block;
+  height: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.service-link-list li a img {
+}
+
+.service-link-list li a:hover img {
+  animation-name: service-icon-ani;
+  animation-duration: 1.0s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+@keyframes service-icon-ani {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(5%);
+  }
+  20% {
+    transform: translateY(10%);
+  }
+  25% {
+    transform: translateY(15%);
+  }
+  35% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(-15%);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.service-link-list li a span {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.service-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48.8%;
+}
+
+
+.service-info {
+  height: 100%;
+  width: 48.57%;
+  float: left;
+  border: 2px solid #fff;
+  padding: 20px 30px;
+}
+
+.service-info-top {
+  text-align: center;
+  border-bottom: 1px dashed #fff;
+  padding-bottom: 14px;
+}
+.service-info-top a {
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.service-info-top a:hover {
+  text-decoration: underline;
+}
+
+.service-info-top a img {
+  margin-right: 15px;
+}
+
+.service-info-bottom {
+}
+.service-info-bottom strong {
+  margin-top: 25px;
+  float: left;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.service-info-list {
+  float: right;
+}
+.service-info-list li {
+  padding: 20px;
+  border-bottom: 1px dashed #fff;
 
 }
+
+.service-info-list li:last-child {
+  border-bottom: none;
+}
+
+.service-info-list li a {
+  font-size: 17px;
+  color: #fff;
+
+}
+
+.service-info-list li a:hover {
+  text-decoration: underline;
+}
+
+
+.service-cs {
+  height: 100%;
+  width: 48.57%;
+  float: right;
+  border: 2px solid #fff;
+  background-color: rgba(28, 87, 154, 0.6);
+  text-align: center;
+}
+
+.service-cs strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 19%;
+}
+.service-cs a {
+  font-size: 39px;
+  color: #fff;
+}
+
+.service-cs a:hover {
+  text-decoration: underline;
+}
+
 
 .service-right {
   float: left;
@@ -818,6 +1029,7 @@ body {
   color: #fff;
   margin-bottom: 25px 0;
 }
+
 .service-list {}
 
 .service-list li {
@@ -854,6 +1066,7 @@ body {
   text-decoration: underline;
   text-underline-position: under;
 }
+
 .service-list li a:hover::after {
   opacity: 1;
 }
