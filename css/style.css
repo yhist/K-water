@@ -1101,12 +1101,13 @@ body {
 }
 
 .news-top {}
-.sw-news-list {
 
-}
+.sw-news-list {}
+
 .sw-news-list .swiper-wrapper {
   justify-content: space-between;
 }
+
 .sw-news-list .swiper-slide {
   display: block;
   width: 23.57%;
@@ -1115,7 +1116,6 @@ body {
   /* swiper.css에 코딩된 것을 수정 */
   /* flex-shringk : 넘치는 경우 줄어드는 비율 */
   flex-shrink: 1;
-  background-color: yellow;
 }
 
 .news-box {
@@ -1125,9 +1125,9 @@ body {
   box-shadow: 5px 5px 20px rgb(221 221 221 / 57%);
   padding: 25px;
 }
-.news-box:last-child {
 
-}
+.news-box:last-child {}
+
 .news-cate {
   position: absolute;
   left: 0;
@@ -1140,10 +1140,12 @@ body {
   background-color: #3d66c4;
   color: #fff;
 }
+
 .news-cate-br {
   background-color: #fd9500;
   color: #333;
 }
+
 .news-title-link {
   /* a태그라서 너비 높이 못주니까 block */
   display: block;
@@ -1206,15 +1208,171 @@ body {
   background-color: pink;
   border-radius: 20px 20px 0 0;
   box-shadow: 5px 5px 20px rgb(221 221 221 / 57%);
+  overflow: hidden;
 }
 
 .news-box-bot:first-child {
   border-radius: 20px 0 20px 0;
+  background: url('../images/webzine_bg_202207.gif') no-repeat left top;
+  background-size: cover;
+}
+
+
+.card-img {
+  width: 100%;
 }
 
 .news-box-bot:last-child {
   margin-right: 0;
 }
+
+.webzine-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.webzine-link h4 {
+  font-size: 25px;
+  line-height: 27px;
+  font-family: "Titillium Web";
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.webzine-link span {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333;
+}
+
+.webzine-link span::after {
+  content: '';
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 26px;
+  height: 4px;
+  background: #3d66c4;
+}
+
+.webzine-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  display: block;
+  width: calc(100% - 50px);
+  height: 38px;
+  background-color: #fff;
+  border-radius: 19px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.webzine-menu a {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  font-size: 13px;
+  line-height: 38px;
+  color: #2e3a53;
+  text-align: center;
+}
+
+.webzine-menu a:hover {
+  background-color: #8799ac;
+  color: #fff;
+}
+
+.webzine-menu a:last-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 38px;
+  background-color: #d1d9e2;
+}
+
+.new-box-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 48px;
+  color: #222;
+  font-weight: 400;
+  line-height: 48px;
+  text-indent: 25px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.sw-sid-control {
+  position: absolute;
+  right: 25px;
+  top: 17px;
+  display: block;
+  width: 110px;
+}
+
+.sw-sid-pg {
+  position: relative;
+  display: block;
+  float: left;
+  width: auto;
+  height: 14px;
+  line-height: 14px;
+  bottom: 0;
+  text-indent: 0;
+  margin-right: 15px;
+}
+
+.sw-sid-prev {
+  display: block;
+  float: left;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background: url('../images/main_pop_leftarrow222.png') no-repeat center;
+}
+
+.sw-sid-pause {
+  display: block;
+  float: left;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background: url('../images/main_pop_stop222.png') no-repeat center;
+}
+
+.sw-sid-play {
+  background: url('../images/btn_play222.png') no-repeat center;
+}
+
+.sw-sid-next {
+  display: block;
+  float: left;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  background: url('../images/main_pop_rightarrow222.png') no-repeat center;
+}
+
 
 /* 문화 */
 .culture {
@@ -1226,6 +1384,126 @@ body {
   height: 100vh;
   background: #e8f4ff url('../images/culture.png') no-repeat left bottom;
 }
+
+.culture-left {
+  position: relative;
+  float: left;
+  width: 49.14%;
+  height: 473px;
+  overflow: hidden;
+}
+
+.culture-left img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+
+}
+
+.culture-left h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -1.48px;
+  color: #fff;
+  text-align: center;
+}
+
+.culture-left a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 75px;
+  width: 145px;
+  height: 40px;
+  text-align: center;
+  background-color: #3d66c4;
+  padding: 5px 15px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.culture-left a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.culture-right {
+  float: right;
+  width: 49.14%;
+  height: 473px;
+  overflow: hidden;
+}
+
+.culture-link {
+  width: 100%;
+  height: calc(100% / 2 - 12px);
+}
+
+.culture-link-museum {
+  float: left;
+  display: block;
+  width: calc(100% / 2 - 12px);
+  height: 100%;
+  margin-right: 24px;
+  background: url('../images/culture_youtube.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.culture-link-blog {
+  float: left;
+  width: calc(100% / 2 - 12px);
+  height: 100%;
+  display: block;
+  background: url('../images/sec4m_rtrbox_bg_202202.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 0 20px 0 0;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.culture-link-blog h4 {
+  color: #222;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.culture-link-blog h4:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.culture-link-blog span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+  display: block;
+}
+
+.culture-yt {
+  width: 100%;
+  height: calc(100% / 2 - 12px);
+  display: block;
+  margin-top: 24px;
+  background: url('../images/culture-yt.jpg') no-repeat left center;
+}
+
+
+
 
 /* 채용 */
 .job {
